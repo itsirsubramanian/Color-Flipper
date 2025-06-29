@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+nav {
+  padding: 10px;
+  background-color: antiquewhite;
+  border-bottom: 2px solid rgba(2, 2, 2, 0.5);
+}
+
+.nav-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nav-center h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 30px;
+  background-image: url("../assets/images/color-splash.png");
+  background-size: cover;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0 10px 10px rgba(120, 117, 165, 0.5);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.container h2 {
+  margin: 20px;
+  padding: 10px;
+  color: antiquewhite;
+  background-color: black;
+  text-transform: capitalize;
+}
+
+.container h2 span {
+  content: " ";
+  color: cadetblue;
+}
+
+.btn {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  padding: 10px;
+  color: black;
+  opacity: 0.8;
+  font-size: 15px;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:hover,
+.btn:focus {
+  transition: 0.1s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+}
