@@ -6,34 +6,54 @@
   box-sizing: border-box;
 }
 
-html,
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 body {
-  width: 100%;
   font-family: "Cabin", sans-serif;
-  font-size: 16px;
   background-color: #000000;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 nav {
-  padding: 10px;
+  padding: 10px 5vw;
   background-color: antiquewhite;
   border-bottom: 2px solid rgba(2, 2, 2, 0.5);
 }
 
 .nav-center {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px 0;
+  gap: 10px;
 }
 
 .nav-center h1 {
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 2rem;
   background-image: url("../assets/images/color-splash.png");
   background-size: cover;
   background-position: center;
@@ -44,12 +64,12 @@ nav {
 }
 
 main {
-  height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
+  height: 80vh;
+  padding: 20px 5vw;
 }
 
 .container {
@@ -57,35 +77,36 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  width: 100%;
+  max-width: 500px;
+  gap: 30px;
 }
 
 .container h2 {
   margin: 20px;
-  padding: 10px;
+  padding: 20px;
   color: antiquewhite;
   background-color: black;
   text-transform: capitalize;
-}
-
-.container h2 span {
-  content: " ";
-  color: cadetblue;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  box-shadow: 0 0 10px rgba(4, 4, 4, 0.9);
 }
 
 .btn {
   font-family: "Courier New", Courier, monospace;
   font-weight: 700;
-  padding: 10px;
+  padding: 10px 0;
   color: black;
-  opacity: 0.8;
-  font-size: 15px;
+  opacity: 0.7;
   background-color: #ffffff;
   text-transform: uppercase;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.1s ease, background-color 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  width: 40%;
+  font-size: 1rem;
 }
 
 .btn:active {
@@ -99,4 +120,64 @@ main {
 
 .btn:focus {
   outline: none;
+}
+
+@media (min-width: 600px) {
+  .nav-center {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  main {
+    flex-direction: row;
+    padding: 40px 8vw;
+  }
+  .container {
+    max-width: 600px;
+    gap: 40px;
+  }
+  .container h2 {
+    font-size: 1.5rem;
+  }
+  .btn {
+    font-size: 1.1rem;
+    width: 20%;
+    padding: 12px 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 800px;
+    gap: 50px;
+  }
+  .container h2 {
+    font-size: 1.8rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+    /* max-width: 180px; */
+    width: 40%;
+    padding: 14px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    gap: 60px;
+  }
+  .container h2 {
+    font-size: 2rem;
+  }
+  .btn {
+    font-size: 1.3rem;
+    /* max-width: 160px; */
+    width: 30%;
+    padding: 16px 0;
+  }
 }
